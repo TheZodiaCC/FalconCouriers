@@ -1,0 +1,4 @@
+class HeavyPackage extends CourierPackage
+{
+	
+}

@@ -1,0 +1,4 @@
+class SmallPackage extends CourierPackage
+{
+	
+}

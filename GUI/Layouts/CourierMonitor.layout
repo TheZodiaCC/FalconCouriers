@@ -1,0 +1,209 @@
+FrameWidgetClass rootFrame {
+ position 10 10
+ size 1877.64001 1057.41003
+ hexactpos 1
+ vexactpos 1
+ hexactsize 1
+ vexactsize 1
+ {
+  PanelWidgetClass PanelWidget0 {
+   ignorepointer 1
+   position 15.1895 15.1895
+   size 1838.83008 1032.21997
+   hexactpos 1
+   vexactpos 1
+   hexactsize 1
+   vexactsize 1
+   style rover_sim_black_2
+   {
+    TextWidgetClass CourierNameTEXT {
+     ignorepointer 1
+     position 12.5948 12.5948
+     size 1000.71002 48
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+    }
+    PanelWidgetClass PanelWidget1 {
+     ignorepointer 1
+     position 12.5948 73.18961
+     size 1000.71002 946.43604
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     style editor_quad
+     {
+      TextListboxWidgetClass TakesPackagesLIST {
+       position 12.5948 85.0146
+       size 975.521 222.233
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       lines 8
+      }
+      TextWidgetClass TextWidget0 {
+       ignorepointer 1
+       position 12.5948 12.5948
+       size 975.521 59.8251
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       text "Takes"
+       "text halign" center
+       "text valign" center
+      }
+      TextWidgetClass TextWidget1 {
+       ignorepointer 1
+       position 12.5948 473.21802
+       size 975.521 59.8251
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       text "Gives"
+       "text halign" center
+       "text valign" center
+      }
+      TextListboxWidgetClass GivesPackagesLIST {
+       position 12.5948 545.638
+       size 975.521 240.73399
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       lines 8
+      }
+      ButtonWidgetClass TakeBUTTON {
+       position 12.5947 871.41705
+       size 975.521 50.3789
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       text "Take"
+      }
+      ButtonWidgetClass GiveBUTTON {
+       position 12.5947 392.81601
+       size 975.521 48
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       text "Give"
+      }
+      TextWidgetClass TextWidget2 {
+       ignorepointer 1
+       position 12.5948 319.84201
+       size 487.76001 59.8251
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       text "Price"
+       "text halign" center
+       "text valign" center
+      }
+      TextWidgetClass PriceTEXT {
+       ignorepointer 1
+       position 500.35498 319.84201
+       size 487.76001 59.8251
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       "text halign" center
+       "text valign" center
+      }
+      TextWidgetClass TextWidget4 {
+       ignorepointer 1
+       position 12.5948 798.96704
+       size 487.76001 59.8251
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       text "Reward"
+       "text halign" center
+       "text valign" center
+      }
+      TextWidgetClass RewardTEXT {
+       ignorepointer 1
+       position 500.35498 798.96704
+       size 487.76001 59.8251
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       "text halign" center
+       "text valign" center
+      }
+     }
+    }
+    PanelWidgetClass PanelWidget2 {
+     ignorepointer 1
+     position 1020.16998 12.5948
+     size 806.06897 1007.58002
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     style editor_quad
+     {
+      MapWidgetClass CouriersMAP {
+       position 12.5997 403.03201
+       size 780.875 591.95404
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+      }
+      TextWidgetClass PackageDescriptionTITLE {
+       ignorepointer 1
+       position 12.5998 12.5947
+       size 780.875 37.78431
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       text "Package Description"
+       "text halign" center
+       "text valign" center
+      }
+      MultilineTextWidgetClass PackageDescriptionTEXT {
+       ignorepointer 1
+       position 12.5998 62.9737
+       size 780.875 277.08499
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       style DayZNormal
+       "exact text" 1
+       "size to text h" 0
+       "size to text v" 0
+       wrap 1
+       "condense whitespace" 1
+       "strip newlines" 1
+      }
+      TextWidgetClass MapTITLE {
+       ignorepointer 1
+       position 12.5997 352.65298
+       size 780.875 37.78431
+       hexactpos 1
+       vexactpos 1
+       hexactsize 1
+       vexactsize 1
+       text "Package Buyers Locations"
+       "text halign" center
+       "text valign" center
+      }
+     }
+    }
+   }
+  }
+ }
+}

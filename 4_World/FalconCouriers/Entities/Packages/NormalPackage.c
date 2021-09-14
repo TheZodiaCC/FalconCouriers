@@ -1,0 +1,4 @@
+class NormalPackage extends CourierPackage
+{
+	
+}

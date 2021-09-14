@@ -1,0 +1,4 @@
+class FalconCourierTaki extends FalconCourier
+{
+	
+}

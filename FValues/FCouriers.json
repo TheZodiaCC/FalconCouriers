@@ -1,0 +1,40 @@
+[
+  {
+    "courierId": 1,
+    "courierName": "Ivan",
+    "type": "FalconCourierTaki",
+    "spawnPoint": "9993 11 1663",
+    "direction": "0 0 0",
+    "maxHumanity": 2000000,
+    "minHumanity": 6000,
+    "head": "",
+    "body": "TShirt_Green",
+    "pants": "Jeans_Black",
+    "boots": "AthleticShoes_Black",
+    "takesPackages": [
+      "HeavyPackage"
+    ],
+    "givesPackages": [
+      "NormalPackage", "SmallPackage"
+    ]
+  },
+  {
+    "courierId": 2,
+    "courierName": "Vlad",
+    "type": "FalconCourierTaki",
+    "spawnPoint": "9998 11 1663",
+    "direction": "0 0 0",
+    "maxHumanity": 2000000,
+    "minHumanity": -2000000,
+    "head": "",
+    "body": "TShirt_Black",
+    "pants": "Jeans_Black",
+    "boots": "AthleticShoes_Black",
+    "takesPackages": [
+      "NormalPackage", "SmallPackage"
+    ],
+    "givesPackages": [
+      "HeavyPackage"
+    ]
+  }
+]

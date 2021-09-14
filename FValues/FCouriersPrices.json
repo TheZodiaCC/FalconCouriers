@@ -1,0 +1,17 @@
+[
+  {
+    "name": "NormalPackage",
+    "sell": 20,
+    "buy": 5
+  },
+  {
+    "name": "SmallPackage",
+    "sell": 5,
+    "buy": 5
+  },
+  {
+    "name": "HeavyPackage",
+    "sell": 10,
+    "buy": 15
+  }
+]
