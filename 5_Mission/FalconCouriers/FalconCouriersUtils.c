@@ -1,8 +1,8 @@
 class FalconCouriersUtils
 {	
-	const static string couriersDataPath = "$profile:/FValues/FCouriers.json";
-	const static string couriersPackagesDetailsPath = "$profile:/FValues/FCouriersPrices.json";
-	const static string coinName = "Goldcoin";
+	const static string couriersDataPath = CouriersConsts.COURIERS_DATA_DIR_PATH;
+	const static string couriersPackagesDetailsPath = CouriersConsts.COURIERS_PACKAGES_DATA_PATH;
+	const static string coinName = CouriersConsts.COIN_ITEM_NAME;
 	
 	
 	static ref array<ref FalconCourierCharacterData> getCouriersData() 

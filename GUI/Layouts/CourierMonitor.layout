@@ -24,6 +24,7 @@ FrameWidgetClass rootFrame {
      vexactpos 1
      hexactsize 1
      vexactsize 1
+     "exact text" 1
     }
     PanelWidgetClass PanelWidget1 {
      ignorepointer 1
@@ -53,6 +54,7 @@ FrameWidgetClass rootFrame {
        hexactsize 1
        vexactsize 1
        text "Takes"
+       "exact text" 1
        "text halign" center
        "text valign" center
       }
@@ -65,6 +67,7 @@ FrameWidgetClass rootFrame {
        hexactsize 1
        vexactsize 1
        text "Gives"
+       "exact text" 1
        "text halign" center
        "text valign" center
       }
@@ -84,6 +87,7 @@ FrameWidgetClass rootFrame {
        vexactpos 1
        hexactsize 1
        vexactsize 1
+       style Editor
        text "Take"
       }
       ButtonWidgetClass GiveBUTTON {
@@ -93,6 +97,7 @@ FrameWidgetClass rootFrame {
        vexactpos 1
        hexactsize 1
        vexactsize 1
+       style Editor
        text "Give"
       }
       TextWidgetClass TextWidget2 {
@@ -104,6 +109,7 @@ FrameWidgetClass rootFrame {
        hexactsize 1
        vexactsize 1
        text "Price"
+       "exact text" 1
        "text halign" center
        "text valign" center
       }
@@ -115,6 +121,7 @@ FrameWidgetClass rootFrame {
        vexactpos 1
        hexactsize 1
        vexactsize 1
+       "exact text" 1
        "text halign" center
        "text valign" center
       }
@@ -127,6 +134,7 @@ FrameWidgetClass rootFrame {
        hexactsize 1
        vexactsize 1
        text "Reward"
+       "exact text" 1
        "text halign" center
        "text valign" center
       }
@@ -138,6 +146,7 @@ FrameWidgetClass rootFrame {
        vexactpos 1
        hexactsize 1
        vexactsize 1
+       "exact text" 1
        "text halign" center
        "text valign" center
       }
@@ -154,50 +163,23 @@ FrameWidgetClass rootFrame {
      style editor_quad
      {
       MapWidgetClass CouriersMAP {
-       position 12.5997 403.03201
-       size 780.875 591.95404
+       position 12.5997 62.9738
+       size 780.875 932.01202
        hexactpos 1
        vexactpos 1
        hexactsize 1
        vexactsize 1
-      }
-      TextWidgetClass PackageDescriptionTITLE {
-       ignorepointer 1
-       position 12.5998 12.5947
-       size 780.875 37.78431
-       hexactpos 1
-       vexactpos 1
-       hexactsize 1
-       vexactsize 1
-       text "Package Description"
-       "text halign" center
-       "text valign" center
-      }
-      MultilineTextWidgetClass PackageDescriptionTEXT {
-       ignorepointer 1
-       position 12.5998 62.9737
-       size 780.875 277.08499
-       hexactpos 1
-       vexactpos 1
-       hexactsize 1
-       vexactsize 1
-       style DayZNormal
-       "exact text" 1
-       "size to text h" 0
-       "size to text v" 0
-       wrap 1
-       "condense whitespace" 1
-       "strip newlines" 1
       }
       TextWidgetClass MapTITLE {
        ignorepointer 1
-       position 12.5997 352.65298
+       position 12.5948 12.5948
        size 780.875 37.78431
        hexactpos 1
        vexactpos 1
        hexactsize 1
        vexactsize 1
        text "Package Buyers Locations"
+       "exact text" 1
        "text halign" center
        "text valign" center
       }

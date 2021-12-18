@@ -1,64 +1,53 @@
 class FCHumanityHelpers
-{
-	const static string logsRoot = "$profile:/FH/";
-	
-	private static FC_HumanityData loadPlayerHumanityData(string playerID)
-	{
-		string playerJsonPath = logsRoot + playerID + ".json";
-		
-		if (FileExist(playerJsonPath))
-		{
-			FC_HumanityData playerHumanityData = new FC_HumanityData();
-			
-			JsonFileLoader<FC_HumanityData>.JsonLoadFile(playerJsonPath, playerHumanityData);
-			
-			return playerHumanityData;
-		}	
-		
-		return null;
-	}
-	
+{	
 	static bool checkIfPlayerHasEnoughtHumanity(string playerId, FalconCourier courier)
 	{
-		FC_HumanityData humanityData = loadPlayerHumanityData(playerId);
-		
-		if (humanityData)
-		{
-			int playerHumanity = humanityData.getHumanity();
+		#ifdef FALCON_HEROES
+			PlayerHumanityValues humanityData = FalconHeroesLogger.loadPlayerHumanityData(playerId);
 			
-			int courierMinHumanity = courier.getMinHumanity();
-			int courierMaxHumanity = courier.getMaxHumanity();
-			
-			return playerHumanity.InRange(courierMinHumanity, courierMaxHumanity);
-		}
-		else
-		{
-			return false;
-		}
+			if (humanityData)
+			{
+				int playerHumanity = humanityData.getHumanity();
+				
+				int courierMinHumanity = courier.getMinHumanity();
+				int courierMaxHumanity = courier.getMaxHumanity();
+				
+				return playerHumanity.InRange(courierMinHumanity, courierMaxHumanity);
+			}
+			else
+			{
+				return false;
+			}
+		#else
+			return true;
+		#endif
 	}
 	
 	static string getHumanityMessage(string playerId, FalconCourier courier)
 	{
-		FC_HumanityData humanityData = loadPlayerHumanityData(playerId);
 		string message = "";
 		
-		if (humanityData)
-		{
-			int playerHumanity = humanityData.getHumanity();
+		#ifdef FALCON_HEROES
+			PlayerHumanityValues humanityData = FalconHeroesLogger.loadPlayerHumanityData(playerId);
 			
-			int courierMinHumanity = courier.getMinHumanity();
-			int courierMaxHumanity = courier.getMaxHumanity();
-			
-			if (playerHumanity < courierMinHumanity)
+			if (humanityData)
 			{
-				message = "Your humanity is too low, courier requires at least: " + courierMinHumanity;
+				int playerHumanity = humanityData.getHumanity();
+				
+				int courierMinHumanity = courier.getMinHumanity();
+				int courierMaxHumanity = courier.getMaxHumanity();
+				
+				if (playerHumanity < courierMinHumanity)
+				{
+					message = CouriersMessagesConsts.HUMANITY_TO_LOW + courierMinHumanity;
+				}
+				
+				else if (playerHumanity > courierMaxHumanity)
+				{
+					message = CouriersMessagesConsts.HUMANITY_TO_HIGH + courierMaxHumanity;
+				}
 			}
-			
-			else if (playerHumanity > courierMaxHumanity)
-			{
-				message = "Your humanity is too high, courier requires at least: " + courierMaxHumanity;
-			}
-		}
+		##endif
 		
 		return message;
 	}

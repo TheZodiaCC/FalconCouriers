@@ -139,12 +139,12 @@ class CourierMenuBack
 					}
 					else
 					{
-						GetRPCManager().SendRPC("FalconCouriers", "FCmessagePlayerC", new Param1<string>("Can't sell ruined package"), true,  player.GetIdentity());
+						CouriersMessagesUtils.messageClient(CouriersMessagesConsts.CANT_SELL_RUINED_ITEM, player);
 					}
 				}
 				else
 				{
-					GetRPCManager().SendRPC("FalconCouriers", "FCmessagePlayerC", new Param1<string>("Can't sell package that is not in your inventory"), true,  player.GetIdentity());
+					CouriersMessagesUtils.messageClient(CouriersMessagesConsts.ITEM_NOT_IN_INVENTORY, player);
 				}
 			}
        	}
@@ -180,7 +180,7 @@ class CourierMenuBack
 				}
 				else
 				{
-					GetRPCManager().SendRPC("FalconCouriers", "FCmessagePlayerC", new Param1<string>("You don't have enought money to pay package fee"), true,  player.GetIdentity());
+					CouriersMessagesUtils.messageClient(CouriersMessagesConsts.NOT_ENOUGHT_MONEY_TO_BUY, player);
 				}
 			}
        	}

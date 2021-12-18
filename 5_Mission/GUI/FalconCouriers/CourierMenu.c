@@ -12,7 +12,6 @@ class CourierMenu extends UIScriptedMenu
 	private TextWidget priceTEXT;
 	private TextWidget rewardTEXT; 
 	
-	private MultilineTextWidget packageDescriptionTEXT;
 	private MapWidget couriersMAP;
 	
 	private TextListboxWidget takesPackagesLIST;
@@ -24,6 +23,8 @@ class CourierMenu extends UIScriptedMenu
 	private ref Timer buttonsTimer = new Timer(CALL_CATEGORY_SYSTEM);
 
 	ref CourierMenuBack courierMenuBack;
+	
+	private string dotIcon = "FalconCouriers\\GUI\\textures\\dot.paa";
 	
 	//Constructor
 	void CourierMenu() {	
@@ -59,9 +60,6 @@ class CourierMenu extends UIScriptedMenu
 			couriersMAP = MapWidget.Cast(widgetRoot.FindAnyWidget("CouriersMAP"));
 			
 			courierNameTEXT = TextWidget.Cast(widgetRoot.FindAnyWidget("CourierNameTEXT"));
-			packageDescriptionTEXT = MultilineTextWidget.Cast(widgetRoot.FindAnyWidget("PackageDescriptionTEXT"));
-			
-			packageDescriptionTEXT.SetTextExactSize(5);
 			
 			priceTEXT = TextWidget.Cast(widgetRoot.FindAnyWidget("PriceTEXT"));
 			rewardTEXT = TextWidget.Cast(widgetRoot.FindAnyWidget("RewardTEXT"));
@@ -109,7 +107,6 @@ class CourierMenu extends UIScriptedMenu
 		courierNameTEXT.SetText("");
 		priceTEXT.SetText("");
 		rewardTEXT.SetText("");
-		packageDescriptionTEXT.SetText("");
 		takesPackagesLIST.ClearItems();
 		givesPackagesLIST.ClearItems();
 		
@@ -217,11 +214,6 @@ class CourierMenu extends UIScriptedMenu
 		}
 	}
 	
-	private void setPackageDescription(ItemBase package)
-	{
-		packageDescriptionTEXT.SetText(package.GetTooltip());
-	}
-	
 	private void getCourierNameC(CallType type, ParamsReadContext ctx, PlayerIdentity sender, Object target) {
 		
 		Param1<string> data;
@@ -290,11 +282,6 @@ class CourierMenu extends UIScriptedMenu
 				priceTEXT.SetText(package.getSellPrice().ToString());
 				
 				ItemBase item = ItemBase.Cast(GetGame().CreateObject(package.getName(), vector.Zero, true, false));
-	
-				if (item)
-				{
-					setPackageDescription(item);
-				} 
 			}
 		}
 	}
@@ -317,11 +304,6 @@ class CourierMenu extends UIScriptedMenu
 				rewardTEXT.SetText(package.getBuyPrice().ToString());
 				
 				ItemBase item = ItemBase.Cast(GetGame().CreateObject(package.getName(), vector.Zero, true, false));
-	
-				if (item)
-				{
-					setPackageDescription(item);
-				}
 			}
 		}
 	}
@@ -344,7 +326,7 @@ class CourierMenu extends UIScriptedMenu
 				
 				for (int i = 0; i < locations.Count(); i++)
 				{
-					couriersMAP.AddUserMark( locations[i].courierPos, locations[i].courierName, ARGB( 255, 230, 20, 20 ), "gui\textures\dot.paa" );
+					couriersMAP.AddUserMark( locations[i].courierPos, locations[i].courierName, ARGB( 255, 230, 20, 20 ), dotIcon);
 				}
 			}
 		}

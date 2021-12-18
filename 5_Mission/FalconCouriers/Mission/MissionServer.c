@@ -8,10 +8,18 @@ modded class MissionServer
 		courierMenuBack = new CourierMenuBack();
 	}
 	
+	override void OnInit()
+	{
+		super.OnInit();
+		
+		FalconCouriersUtils.initCouriers();
+	}
+	
 	override void OnMissionLoaded()
 	{
 		super.OnMissionLoaded();
 		
-		FalconCouriersUtils.initCouriers();
+		// Stopped working don't know why, works when called in OnMissionLoaded() in FalconTraders. Moved to OnInit()
+		//FalconCouriersUtils.initCouriers();
 	}
 }
